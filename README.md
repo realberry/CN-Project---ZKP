@@ -1,18 +1,52 @@
-﻿# CN-Project---ZKP
-The src directory contains the source code
+````md
+# CN-Project---ZKP
 
-If bin doesn't exist, use this to compile the code:
+## Project Structure
+- `src/` contains all the source code.
+- `bin/` contains compiled `.class` files.
+
+## Compilation
+
+If the `bin` directory does not exist, create it and compile the code using:
+
+```bash
 mkdir bin
 javac -cp "lib/*;src" -d bin src/client/*.java src/server/*.java src/common/*.java
+````
 
-To run server (run server before you test any client):
+## Running the Project
+
+### Start the Server
+
+Run the server before testing any client:
+
+```bash
 java -cp "lib/*;bin" server.ZKPServer
+```
 
-To run valid client:
+### Run Clients
+
+#### Valid Client
+
+```bash
 java -cp "lib/*;bin" client.ZKPClient
+```
 
-To run invalid client 1 (has an edge with the same colours):
+#### Invalid Client 1
+
+Has an edge with the same colours:
+
+```bash
 java -cp "lib/*;bin" client.ZKPClientFailure1
+```
 
-To run invalid client 2 (uses more than 4 colours):
+#### Invalid Client 2
+
+Uses more than 4 colours:
+
+```bash
 java -cp "lib/*;bin" client.ZKPClientFailure2
+```
+
+```
+```
